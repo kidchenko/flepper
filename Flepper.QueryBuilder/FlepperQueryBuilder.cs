@@ -64,6 +64,14 @@ namespace Flepper.QueryBuilder
             => new QueryBuilder().DeleteCommand();
 
         /// <summary>
+        /// Softs the delete.
+        /// </summary>
+        /// <returns>The delete.</returns>
+        /// <param name="table">Table.</param>
+        public static ISoftDeleteCommand SoftDelete(string table)
+            => new QueryBuilder().SoftDeleteCommand(table);
+
+        /// <summary>
         /// Create Update Command
         /// </summary>
         /// <param name="table">Table name</param>
